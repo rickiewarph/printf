@@ -8,6 +8,8 @@
 int handle_flags(int n, char *flags)
 {
 	int count = 0;
+	char buffer[20];
+	int i;
 
 	if (flags[2] == '#')
 	{
@@ -30,8 +32,6 @@ int handle_flags(int n, char *flags)
 	}
 	else if (n >= 0 && flags[0] == '+')
 		count += write(1, "+", 1);
-	char buffer[20];
-	int i = 0;
 
 	do	{
 		buffer[i++] = n % 10 + '0';
