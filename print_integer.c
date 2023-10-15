@@ -37,7 +37,7 @@ int printf_int(va_list args)
 			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			i++
+			i++;
 		}
 	}
 	_putchar(last + '0');
@@ -81,7 +81,7 @@ int printf_dec(va_list args)
 			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			i++
+			i++;
 		}
 	}
 	_putchar(last + '0');
