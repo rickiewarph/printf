@@ -5,6 +5,11 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#define F_MINUS 0x01
+#define F_PLUS 0x02
+#define F_ZERO 0x04
+#define F_HASH 0x08
+#define F_SPACE 0x10
 /**
  * struct format - structure
  * @id: characters
@@ -39,5 +44,5 @@ int PRINT_HEX(va_list val);
 int print_HEXtra(unsigned int num);
 int print_pointer(va_list val);
 int print_rev(va_list val);
-int handle_flags(int n, char *flags);
+int active_flags_det(const char *format, int *index);
 #endif
