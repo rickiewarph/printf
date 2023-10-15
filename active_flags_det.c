@@ -9,13 +9,13 @@ int active_flags_det(const char *format, int *index)
 {
 	int j, current_index;
 	int flags = 0;
-	const char FLAG_CHARS[] = {'-', '+', '0' '#', ' ', '\0'};
+	const char FLAG_CHARS[] = {'-', '+', '0', '#', ' ', '\0'};
 	const int FLAG_VALUES[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
 	for (current_index = *index + 1; format[current_index] != '\0'; current_index++)
 
 	{
-		if (format[current_index] == '%') 
+		if (format[current_index] == '%')
 		{
 			break;
 
@@ -23,13 +23,13 @@ int active_flags_det(const char *format, int *index)
 		for (j = 0; FLAG_CHARS[j] != '\0'; j++)
 
 		{
-			if (format[current_index] == FLAG_CHARS[j]) 
+			if (format[current_index] == FLAG_CHARS[j])
 			{
 				flags |= FLAG_VALUES[j];
 				break;
 			}
 		}
-		if (FLAG_CHARS[j] == 0) 
+		if (FLAG_CHARS[j] == 0)
 		{
 			break;
 		}

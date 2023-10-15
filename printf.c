@@ -26,6 +26,10 @@ here:
 		j = 13;
 		while (j >= 0)
 		{
+			if (format[i] == '\0')
+			{
+				break;
+			}
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
 				len = len + m[j].f(args);

@@ -24,7 +24,7 @@ int print_hextra(unsigned long int num)
 		array[m] = tmp % 16;
 		tmp = tmp / 16;
 	}
-	for (m = c - 1; m >= 0; m++)
+	for (m = c - 1; m >= 0; m--)
 	{
 		if (array[m] > 9)
 			array[m] = array[m] + 39;
