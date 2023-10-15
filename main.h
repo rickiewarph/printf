@@ -39,5 +39,5 @@ int PRINT_HEX(va_list val);
 int print_HEXtra(unsigned int num);
 int print_pointer(va_list val);
 int print_rev(va_list val);
-
+int handle_flags(int n, char *flags);
 #endif
