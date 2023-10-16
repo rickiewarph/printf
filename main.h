@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -49,4 +50,5 @@ int active_flags_det(const char *format, int *index);
 int width_calc(const char *format, int *index, va_list args);
 int precision_handle(const char *f, int *i, va_list l);
 int is_digit(char c);
+
 #endif
