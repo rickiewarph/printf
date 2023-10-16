@@ -48,4 +48,5 @@ int print_rev(va_list val);
 int active_flags_det(const char *format, int *index);
 int width_calc(const char *format, int *index, va_list args);
 int precision_handle(const char *f, int *i, va_list l);
+int is_digit(char c);
 #endif

@@ -1,5 +1,14 @@
 #include "main.h"
-#include <ctype.h>
+/**
+ * is_digit - checks if character is a digit
+ * @c: character to check
+ * Return: 1 if true, 0 if false
+ */
+int is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+
 /**
  * width_calc - Determines the printing width
  * @format: Format string to process
