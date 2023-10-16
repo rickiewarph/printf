@@ -23,7 +23,7 @@ int width_calc(const char *format, int *index, va_list args)
 
 	for (; format[i] != '\0'; i++)
 	{
-		if (isdigit(format[i]))
+		if (is_digit(format[i]))
 		{
 			width *= 10;
 			width += format[i] - '0';

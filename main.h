@@ -10,6 +10,8 @@
 #define F_PLUS 0x02
 #define F_ZERO 0x04
 #define F_HASH 0x08
+#define SIZE_LONG 2
+#define SIZE_SHORT 1
 #define F_SPACE 0x10
 
 /**
