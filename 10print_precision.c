@@ -21,7 +21,7 @@ int precision_handle(const char *f, int *i, va_list l)
 		if ('0' <= f[c_idx] && f[c_idx] <= '9')
 		{
 			p *= 10;
-			P += f[c_idx] - '0';
+			p += f[c_idx] - '0';
 		}
 		else if (f[c_idx] == '*')
 		{
