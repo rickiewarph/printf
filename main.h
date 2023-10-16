@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <ctype.h>
 
 #define F_MINUS 0x01
 #define F_PLUS 0x02
