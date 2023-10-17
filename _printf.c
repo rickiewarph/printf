@@ -9,7 +9,8 @@
 int _printf(const char *format, ...)
 {
 	match m[] = {
-		{"%c", printf_char}, {"%s", printf_string}, {"%%", print_37}, {"%d", printf_dec}, {"%i", printf_int},
+		{"%c", printf_char}, {"%s", printf_string}, {"%%", print_37},
+		{"%d", printf_dec}, {"%i", printf_int},
 		{"%r", print_rev}, {"%R", print_rot13}, {"%b", print_binary},
 		{"%u", printf_unsigned_int}, {"%o", print_oct}, {"%x", print_hex},
 		{"%X", PRINT_HEX}, {"%S", print_STRING}, {"%p", print_pointer}
@@ -18,7 +19,6 @@ int _printf(const char *format, ...)
 	va_list args;
 	int i = 0, len = 0;
 	int j;
-	int precision;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
@@ -36,15 +36,12 @@ here:
 			}
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				precision = precision_handle(format, &i, args);
-				len = len + m[j].f(args, precision);
+				len = len + m[j].f(args);
 				i = i + 2;
 				goto here;
 			}
 			j--;
 		}
-		if (format[i] != '\0')
-		{
 			_putchar(format[i]);
 			i++;
 			len++;
