@@ -14,7 +14,7 @@
 #define SIZE_LONG 2
 #define SIZE_SHORT 1
 #define F_SPACE 0x10
-
+#define BUFFER_H 1024
 /**
  * struct format - structure
  * @id: characters
