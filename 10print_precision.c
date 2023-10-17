@@ -4,7 +4,7 @@
  * @f: formated string to print arguments
  * @i: list of printed arguments
  * @l: list of arguments
- * Return: P
+ * Return: p
  */
 int precision_handle(const char *f, int *i, va_list l)
 {
