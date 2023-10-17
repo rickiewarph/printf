@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * print_binary - function to use in binary conversion
  * @val: argument passed
@@ -13,6 +13,7 @@ int print_binary(va_list val)
 	unsigned int m;
 	int count = 0;
 	int flag = 0;
+	char c;
 
 	for (i = 0; i < 32; i++)
 	{
@@ -22,14 +23,16 @@ int print_binary(va_list val)
 		if (flag)
 		{
 			b = m >> (31 - i);
-			_putchar(b + 48);
+			c = b + '0';
+			write(1, &c, 1);
 			count++;
 		}
 	}
 	if (count == 0)
 	{
 		count++;
-		_putchar('0');
+		c = '0';
+		write(1, &c, 1);
 	}
 	return (count);
 }
